@@ -52,3 +52,48 @@ func TestMultiplesDepositos(t *testing.T) {
 		t.Errorf("100 + 50 + 25 debería ser 175, pero es %f", saldo)
 	}
 }
+
+// Puede usar cosas PRIVADAS porque estamos en el mismo paquete
+func TestAccesoPrivado(t *testing.T) {
+	t.Run("Puedo usar función privada nuevaCuentaPrivada", func(t *testing.T) {
+		// FUNCIONA: nuevaCuentaPrivada es privada pero estamos en el mismo paquete
+		cuenta := nuevaCuentaPrivada("Ana Interna")
+
+		// FUNCIONA: saldo es privado pero podemos acceder
+		if cuenta.saldo != 100 {
+			t.Errorf("Esperaba 100, obtuve %f", cuenta.saldo)
+		}
+	})
+
+	t.Run("Puedo usar método privado calcularInteres", func(t *testing.T) {
+		cuenta := NuevaCuenta("Carlos")
+		cuenta.Depositar(1000)
+
+		// FUNCIONA: calcularInteres es privado pero estamos en el mismo paquete
+		interes := cuenta.calcularInteres(0.10)
+		if interes != 100 {
+			t.Errorf("10% de 1000 debería ser 100, obtuve %f", interes)
+		}
+	})
+
+	t.Run("Puedo modificar campo privado directamente", func(t *testing.T) {
+		cuenta := NuevaCuenta("María")
+
+		// FUNCIONA: modifico saldo directamente (es privado pero estoy en el paquete)
+		cuenta.saldo = 999
+
+		if cuenta.ObtenerSaldo() != 999 {
+			t.Errorf("Esperaba 999, obtuve %f", cuenta.ObtenerSaldo())
+		}
+	})
+}
+
+// Prueba normal con API pública (también funciona)
+func TestDepositarPublico(t *testing.T) {
+	cuenta := NuevaCuenta("Ana")
+	cuenta.Depositar(100)
+
+	if cuenta.ObtenerSaldo() != 100 {
+		t.Errorf("Esperaba 100, obtuve %f", cuenta.ObtenerSaldo())
+	}
+}
