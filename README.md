@@ -12,9 +12,9 @@ Este proyecto demuestra el uso de **encapsulación** en Go, probando cómo las p
 
 ## Código agregado en cuenta_externo_test.go:
 
-![Pruebas externas 1](docs/images/image0.png)
 ![Pruebas externas 1](docs/images/image1.png)
 ![Pruebas externas 1](docs/images/image2.png)
+![Pruebas externas 1](docs/images/image3.png)
 
 ## Ejecutar todas las pruebas en go 
 
