@@ -10,7 +10,7 @@ Este proyecto demuestra el uso de **encapsulación** en Go, probando cómo las p
 
 ![Estructura](docs/images/image.png)
 
-## Código agregado en cuenta_test.go:
+## Código agregado en cuenta_externo_test.go:
 
 ![Pruebas externas 1](docs/images/image0.png)
 ![Pruebas externas 1](docs/images/image1.png)
