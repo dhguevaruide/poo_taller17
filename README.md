@@ -22,13 +22,13 @@ go test ./banco_test -v
 
 ## Ejecutar solo pruebas externas (package banco_test):
 
-Ejecuta las pruebas
-Captura la salida completa de la ejecución (puedes copiar el texto de la terminal o tomar una captura de pantalla).
-Compara esta nueva ejecución con la ejecución anterior
-Analiza y responde en tu informe:
-¿Qué nuevas pruebas aparecen en la ejecución?
-¿Qué métodos o funcionalidades adicionales se están probando?
-¿Cómo se refleja en los resultados el hecho de que los nuevos métodos son privados?
-¿Qué diferencias observas en la cobertura de pruebas entre ambas ejecuciones?
-¿Qué aprendizaje obtienes sobre la encapsulación en Go a partir de este ejercicio?
-Entregar el proyecto
+1. Ejecuta las pruebas
+2. Captura la salida completa de la ejecución (puedes copiar el texto de la terminal o tomar una captura de pantalla).
+3. Compara esta nueva ejecución con la ejecución anterior
+4. Analiza y responde en tu informe:
+- ¿Qué nuevas pruebas aparecen en la ejecución?
+- ¿Qué métodos o funcionalidades adicionales se están probando?
+- ¿Cómo se refleja en los resultados el hecho de que los nuevos métodos son privados?
+- ¿Qué diferencias observas en la cobertura de pruebas entre ambas ejecuciones?
+- ¿Qué aprendizaje obtienes sobre la encapsulación en Go a partir de este ejercicio?
+5. Entregar el proyecto
